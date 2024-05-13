@@ -35,7 +35,6 @@ jobs:
         if: failure()
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+
           format: markdown
           message: "Тесты не прошли. Проверьте результаты:\n\n${{ env.TEST_RESULTS }}"
